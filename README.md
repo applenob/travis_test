@@ -6,3 +6,6 @@ Travis使用docker镜像作为测试环境的demo。
 
 [travis配置文件](.travis.yml)
 
+travis网站上显示的log：
+
+![](images/travis_log.png)
