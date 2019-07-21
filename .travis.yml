@@ -1,0 +1,12 @@
+language: python
+
+services:
+  - docker
+
+before_install:
+  - docker pull javen0chen/travis_test:py_conda
+  - docker run -it -d --name travis_con javen0chen/travis_test:py_conda bash
+  - docker exec travis_con git clone https://github.com/applenob/travis_test
+
+script:
+  - docker exec travis_con bash /travis_test/test.sh
